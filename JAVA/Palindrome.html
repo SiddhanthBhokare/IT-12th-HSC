@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Palindrome</title>
+</head>
+<body> 
+    <input type="text" id="s1" placeholder="Enter a String">
+    <input type="submit" onclick="reverse_String()">
+
+    <script type="text/javascript"> 
+        function reverse_String() {
+            var str = document.getElementById('s1').value; 
+            var final_str = str;
+            var split = str.split("");
+            var reverse = split.reverse();
+            var reverse_data = reverse.join(""); 
+            
+            document.write("Reverse: " + reverse_data); 
+            
+            if (final_str === reverse_data) {
+                document.write("<br>It is a palindrome");
+            } else {
+                document.write("<br>It is not a palindrome");
+            }
+        }
+    </script>
+</body>
+</html>
