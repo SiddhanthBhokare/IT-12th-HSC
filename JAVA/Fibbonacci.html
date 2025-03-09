@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <title>Fibbonacci series</title>
+  <body>
+    <h1>Fibbonacci series</h1>
+    <p>Enter the number of terms: <input type="text" id="terms" /></p>
+    <button onclick="generateFib()">Generate</button>
+    <p id="result"></p>
+    <script>
+      function generateFib() {
+        var terms = document.getElementById("terms").value;
+        var a = 0,
+          b = 1,
+          c;
+        var result = a + " " + b;
+        for (var i = 2; i < terms; i++) {
+          c = a + b;
+          result += " " + c;
+          a = b;
+          b = c;
+        }
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <title>Area of shapes</title>
+  <body>
+    <h4>Rectangle</h4>
+    <input type="text" id="length" placeholder="Length" />
+    <br />
+    <br />
+
+    <input type="text" id="breadth" placeholder="Breadth" />
+    <br />
+    <button onclick="rectangle()">Calculate</button>
+    <p id="result"></p>
+    <br />
+    <h4>Square</h4>
+    <input type="text" id="side" placeholder="Side" />
+    <br />
+    <button onclick="square()">Calculate</button>
+    <br />
+    <p id="result1"></p>
+    <h4>Circle</h4>
+    <br />
+
+    <input type="text" id="radius" placeholder="Radius" />
+    <br /><button onclick="circle()">Calculate</button>
+    <p id="result2"></p>
+    <h4>Triangle</h4>
+    <br />
+    <input type="text " id="base" placeholder="Base" />
+    <br />
+    <input type="text" id="height" placeholder="Height" />
+    <br />
+    <button onclick="triangle()">Calculate</button>
+    <p id="result3"></p>
+    <script>
+      function rectangle() {
+        var length = document.getElementById("length").value;
+        var breadth = document.getElementById("breadth").value;
+        var area = length * breadth;
+        document.getElementById("result").innerHTML =
+          "Area of rectangle is " + area;
+      }
+      function square() {
+        var side = document.getElementById("side").value;
+        var area = side * side;
+        document.getElementById("result1").innerHTML =
+          "Area of square is " + area;
+      }
+      function circle() {
+        var radius = document.getElementById("radius").value;
+        var area = 3.14 * radius * radius;
+        document.getElementById("result2").innerHTML =
+          "Area of circle is " + area;
+      }
+      function triangle() {
+        var base = document.getElementById("base").value;
+        var height = document.getElementById("height").value;
+        var area = 0.5 * base * height;
+        document.getElementById("result3").innerHTML =
+          "Area of triangle is " + area;
+      }
+    </script>
+  </body>
+</html>
